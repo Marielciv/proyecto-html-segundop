@@ -1,0 +1,224 @@
+/*Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Estilos generales */
+body {
+    font-family:initial;
+    background-color: #E9E3DF;
+    color: black;
+    line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+    background-color: #415E72;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+
+/* Estructura principal */
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr; /* área principal + aside */
+    gap: 3rem;
+    padding: 3rem;
+}
+
+/* Contenedor de contenido principal */
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Secciones principales */
+section {
+    background-color: #234C6A;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* Títulos dentro de section */
+section h2 {
+    color: #090040;
+    margin-bottom: 1rem;
+}
+
+/* Artículos */
+article {
+    margin-bottom: 1rem;
+    border-left: 5px solid #090040;
+    padding-left: 2rem;  /*es el espacio de la raya con el texto*/
+}
+
+/* Artículos títulos */
+article h3 {
+    color: #7F8CAA;
+    margin-bottom: 0.5rem;
+}
+
+/* Aside  barra lateral*/
+aside {
+    background-color: #A1C2BD;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+aside h2 {
+    color: #00809D;  /*el color de la letra del titulo*/
+    margin-bottom: 1rem;
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside ul li {
+    margin-bottom: 2rem;
+}
+
+aside ul li a {
+    color: #17313E;    /*el color de la letra del link*/
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+/*Formulario*/
+.formulario{
+    background-color: white;
+    width: 100%;
+    max-width: 490px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+}
+
+/*Formulario generales*/
+.formulario label{
+    display:inline-block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+/*campo de entrada y select*/
+.formulario input[type="text"],
+.formulario input[type="number"],
+.formulario select {
+    width: 100%;
+    padding: 0.6rem;
+    margin-bottom: 1rem;
+    border:1px solid #5142d8;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+
+/*efect focus*/
+.formulario input:focus,
+.formulario select:focus{
+    outline: none;
+    border-color: #799EFF;
+    box-shadow: 0 0 4px rgba(0, 119, 182, 0.4);
+}
+
+
+/*grupo de opciones (radio/checkbox) */
+.grupo-opciones {
+    margin-bottom: 1rem;
+}
+.grupo-opciones p{
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+.grupo-opciones label{
+    display:inline-block;
+    font-weight: normal;
+    margin-bottom: 0.3rem;
+}
+
+
+/*button*/
+.formulario button{
+    width: 100%;
+    background-color: #1A2A80;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/*hover del button*/
+.formulario button:hover{
+    background-color: #0077b6;
+}
+
+
+
+.tarjeta{
+    background-color: #234C6A; /*color de fondo verde*/
+    width: 200%; /*ancho del 80% del contenedor padre*/
+    max-width: 900px; /*ancho maximo de 600% */
+    margin: 2rem auto; /*centrado horizontal con margen automatico*/
+    padding: 2.5rem; /* relleno interno*/
+    border-radius: 15px; /*border redondeados */
+    box-shadow: 0 4px 10px #1A2A80; /* box-shadow se usa para dar sombra*/
+    transition: transform 0.3s ease; /*Transicion suave para el hover (pasar el ratón)*/
+}
+
+/*efecto mover para la tarjeta*/
+.tarjeta:hover{
+    transform: scale(1.07); /*escala de la  tarjeta */
+}
+
+/*Titulo dentro de la tarjeta*/
+.tarjeta h2{
+    color:#090040; /*color de letra*/
+    text-align: center;
+    margin-bottom: 1rem; /*margen interfaz*/
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px ;
+}
+
+/* Pie de página */
+footer {
+    background-color: #415E72;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    aside {
+        order: -1; /* el aside se muestra arriba en pantallas pequeñas */
+    }
+}

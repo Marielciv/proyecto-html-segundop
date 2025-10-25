@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Clarita Mariel Castienyra Ventura"> 
+    <meta name="date" content="24 / octubre / 2025"> 
+    <meta name="description" content="sitio web"> 
+    <meta name="keywords" content="html5, sitio, web">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Formulario</title>
+</head>
+<body>
+    <header>
+        <h1> Encuesta </h1>
+        <nav> <!-- barra de navegacion-->
+            <a href="pagPrincipal.html">Inicio</a>
+            <a href="formulario.html">Encuesta</a>
+            <a href="acerda-desarrollador.html">Info. del Desarrollador</a>
+         </nav>
+    </header>
+
+    <main>
+
+        <form class="formulario">
+            <!-- textbox -->
+            <label for="nombre">Nombre completo: </label>
+            <input type="text" id="nombre" name="nombre" >
+ <br><br>
+            <label for="edad">Ingresa tu edad: </label>
+            <input type="number" min="1" max="100" id="edad" name="edad" >
+ <br><br>
+            <label for="cuidad">De donde nos escribes: </label>
+            <input type="text" id="cuidad" name="cuidad">
+ <br><br>
+            <!-- Selección  -->
+            <label for="pelicula">Pelicula que te gusta de estas opciones :</label>
+            <select id="pelicula" name="pelicula">
+                <option value="">Selecciona una opción</option>
+                <option value="pelicula1">Batman</option>
+                <option value="pelicula2">El planeta de los simios</option>
+                <option value="pelicula3">Charlie y la fábrica de chocolate</option>
+                <option value="pelicula4">El cadáver de la novia</option>
+                <option value="pelicula5">Wednesday</option>
+            </select>
+ <br><br>          
+            <label for="favpeli">¿Cual es tu película favorita de TimBurton? </label>
+            <input type="text" id="favpeli" name="favpeli">
+ <br>
+            <!-- Radio Buttons-->
+            <div class="grupo opciones">
+                <p> ¿Cuantas películas ha hecho TimBurton: </p>
+                <label><input type="radio" name="numero" value="8">8</label>
+                <label><input type="radio" name="numero" value="12">12</label>
+                <label><input type="radio" name="numero" value="17">17</label>
+                <label><input type="radio" name="numero" value="21">21</label>
+            </div>
+ <br>
+            <!-- Checkboxes-->
+            <div class="grupo opciones">
+                <p> ¿Qué personajes te agradan de la película "Alicia en el País de las Maravillas"? </p>
+                <label><input type="checkbox" name="personaje" value="alicia">Alicia</label>
+                <label><input type="checkbox" name="personaje" value="sombrereroloco">Sombrero Loco</label>
+                <label><input type="checkbox" name="personaje" value="reinacorazones">Reina de Corazones</label>
+                <label><input type="checkbox" name="personaje" value="reinablanca">Reina Blanca</label>
+                <label><input type="checkbox" name="personaje" value="conejoblaco">Conejo Blanco</label>
+                <label><input type="checkbox" name="personaje" value="cheshirecat">Cheshirecat</label>
+                <label><input type="checkbox" name="personaje" value="bandersnatch">Bandersnatch</label>
+            </div> 
+ <br><br>
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Clarita Mariel Caastienyra Ventura © 2025 |  Encuesta acerca de TimBurton</p>
+    </footer>
+
+</body>
+</html>
